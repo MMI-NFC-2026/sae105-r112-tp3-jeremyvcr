@@ -5,7 +5,7 @@
 body {
   margin: 0;
   padding: 24px;
-  font-family: sans-serif;
+
 }
 
 img {
@@ -78,11 +78,6 @@ img {
   width: 100%;
 }
 
-.carousel__button:focus-visible {
-  outline: 3px solid #2458b8;
-  outline-offset: 3px;
-}
-
 @media (min-width: 640px) {
   .carousel__item {
     flex-basis: 45%;
@@ -103,30 +98,6 @@ img {
   padding: 0;
   margin: 16px 0;
   list-style: none;
-}
-
-.carousel__links a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 44px;
-  min-height: 44px;
-  border: 1px solid #1c1514;
-  border-radius: 50%;
-  color: #1c1514;
-  text-decoration: none;
-}
-
-.carousel__links a:hover,
-.carousel__links a:focus-visible {
-  color: #fff;
-  background: #1c1514;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .carousel__container {
-    scroll-behavior: auto;
-  }
 }
 
 .carousel__button--next {
