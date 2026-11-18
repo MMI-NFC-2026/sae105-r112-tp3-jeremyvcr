@@ -59,7 +59,7 @@ img {
 }
 
 .carousel__item {
-  flex: 1 0 260px;
+  flex: 0 0 80%;
   scroll-snap-align: center;
 }
 
@@ -71,4 +71,16 @@ img {
 .carousel__button:focus-visible {
   outline: 3px solid #2458b8;
   outline-offset: 3px;
+}
+
+@media (min-width: 640px) {
+  .carousel__item {
+    flex-basis: 45%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .carousel__item {
+    flex-basis: 30%;
+  }
 }
