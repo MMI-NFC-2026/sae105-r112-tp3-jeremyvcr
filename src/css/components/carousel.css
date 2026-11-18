@@ -25,15 +25,23 @@ img {
   border: 0;
 }
 
+.carousel__viewport {
+  position: relative;
+  margin-inline: -24px;
+}
+
 .carousel__controls {
-  display: flex;
-  gap: 16px;
-  align-items: center;
-  justify-content: center;
-  margin: 16px 0;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
 }
 
 .carousel__button {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+  pointer-events: auto;
   width: 50px;
   height: 50px;
   display: flex;
@@ -46,16 +54,18 @@ img {
 }
 
 .carousel__button--prev {
-  transform: rotate(180deg);
+  left: 16px;
+  transform: translateY(-50%) rotate(180deg);
 }
 
 .carousel__container {
   display: flex;
   gap: 16px;
   overflow-x: scroll;
-  margin-left: -24px;
-  margin-right: -24px;
+  margin-left: 0;
+  margin-right: 0;
   scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
 }
 
 .carousel__item {
@@ -113,12 +123,12 @@ img {
   background: #1c1514;
 }
 
-.carousel__container {
-  scroll-behavior: smooth;
-}
-
 @media (prefers-reduced-motion: reduce) {
   .carousel__container {
     scroll-behavior: auto;
   }
+}
+
+.carousel__button--next {
+  right: 16px;
 }
