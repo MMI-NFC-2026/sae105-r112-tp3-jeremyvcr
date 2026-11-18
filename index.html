@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8">
@@ -13,33 +13,44 @@
   <h1>Test Carousel</h1>
   <div class="carousel" aria-labelledby="carousel-heading">
     <h2 id="carousel-heading" class="carousel__heading sr-only">
-      Carousel d'images musicales
+      Carrousel d'images musicales
     </h2>
-    <div class="carousel__container" role="region" aria-live="polite">
-      <div class="carousel__item">
-        <img src="/assets/img/agenda-01.avif" alt="Image musique 1" />
+    <div class="carousel__viewport">
+      <div id="carousel-track" class="carousel__container" role="region" aria-labelledby="carousel-heading" aria-live="polite" tabindex="0">
+        <div class="carousel__item" id="image-1">
+          <img src="/assets/img/agenda-01.avif" alt="Image musique 1" />
+        </div>
+        <div class="carousel__item" id="image-2">
+          <img src="/assets/img/agenda-02.avif" alt="Image musique 2" />
+        </div>
+        <div class="carousel__item" id="image-3">
+          <img src="/assets/img/agenda-03.avif" alt="Image musique 3" />
+        </div>
+        <div class="carousel__item" id="image-4">
+          <img src="/assets/img/agenda-04.avif" alt="Image musique 4" />
+        </div>
+        <div class="carousel__item" id="image-5">
+          <img src="/assets/img/agenda-05.avif" alt="Image musique 5" />
+        </div>
       </div>
-      <div class="carousel__item">
-        <img src="/assets/img/agenda-02.avif" alt="Image musique 2" />
-      </div>
-      <div class="carousel__item">
-        <img src="/assets/img/agenda-03.avif" alt="Image musique 3" />
-      </div>
-      <div class="carousel__item">
-        <img src="/assets/img/agenda-04.avif" alt="Image musique 4" />
-      </div>
-      <div class="carousel__item">
-        <img src="/assets/img/agenda-05.avif" alt="Image musique 5" />
+      <div class="carousel__controls">
+        <button type="button" class="carousel__button carousel__button--prev" aria-label="Défiler vers la gauche" aria-controls="carousel-track">
+          <img src="/assets/icones/icon_arrowcarrousel.svg" alt="" />
+        </button>
+        <button type="button" class="carousel__button carousel__button--next" aria-label="Défiler vers la droite" aria-controls="carousel-track">
+          <img src="/assets/icones/icon_arrowcarrousel.svg" alt="" />
+        </button>
       </div>
     </div>
-    <div class="carousel__controls">
-      <button class="carousel__button carousel__button--prev" aria-label="Défiler vers la gauche">
-        <img src="/assets/icones/icon_arrowcarrousel.svg" alt="fleche gauche" />
-      </button>
-      <button class="carousel__button carousel__button--next" aria-label="Défiler vers la droite">
-        <img src="/assets/icones/icon_arrowcarrousel.svg" alt="fleche droite" />
-      </button>
-    </div>
+    <nav class="carousel__navigation" aria-label="Choisir une image du carrousel">
+      <ol class="carousel__links">
+        <li><a href="#image-1" aria-label="Afficher l'image 1">1</a></li>
+        <li><a href="#image-2" aria-label="Afficher l'image 2">2</a></li>
+        <li><a href="#image-3" aria-label="Afficher l'image 3">3</a></li>
+        <li><a href="#image-4" aria-label="Afficher l'image 4">4</a></li>
+        <li><a href="#image-5" aria-label="Afficher l'image 5">5</a></li>
+      </ol>
+    </nav>
   </div>
 </body>
 
